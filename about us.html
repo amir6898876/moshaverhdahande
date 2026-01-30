@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'yekan';
+            src: url(B-Yekan-Plus-Font/B\ Yekan\ Plus\ Bold.ttf);
+            src: url(B-Yekan-Plus-Font/B\ Yekan\ Plus\ Regular.ttf);
+        }
+
+        body {
+            font-family: yekan;
+        }
+
+        .col15 {
+            margin-top: -20px;
+        }
+
+        .p2 {
+            color: #ffffff;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        .row1 {
+            background: linear-gradient(to left, rgb(214, 83, 83), rgb(255, 182, 182), rgb(255, 189, 189));
+            border-radius: 13px;
+
+        }
+
+        .col4 {
+            padding: 10px;
+            color: #ffffff;
+        }
+
+        .p9 {
+            display: inline-block;
+            transition: transform 0.6s;
+            border-bottom: 2px solid white;
+        }
+
+        .p9:hover {
+            transform: translateY(-2px);
+        }
+
+
+        .img1 {
+            width: 200px;
+            margin-top: 30px;
+        }
+
+        .col5 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn {
+            margin-right: 20px;
+        }
+
+        .btn1 {
+            width: 120px;
+            height: 45px;
+            background-color: rgb(255, 23, 100);
+            border-radius: 13px;
+            border: none;
+            font-weight: bolder;
+            color: white;
+            transition: 1s;
+        }
+
+        .btn2 {
+            width: 120px;
+            height: 45px;
+            background-color: white;
+            border-radius: 13px;
+            border: 0.7px solid red;
+            font-weight: bolder;
+            color: rgb(255, 23, 100);
+            transition: 1s;
+        }
+
+        .btn1:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 3px gray;
+            color: rgb(255, 23, 100);
+            background-color: white;
+            border: 1px solid red;
+        }
+
+        .btn2:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 3px gray;
+            color: white;
+            background-color: rgb(255, 23, 100);
+            border: none;
+        }
+
+        .row2,
+        .row1,
+        hr {
+            animation: h3 1s ease-in-out forwards;
+        }
+
+        @keyframes h3 {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+        }
+
+
+        .row3 {
+            height: 200px;
+            width: 250px;
+            background-color: rgb(214, 83, 83);
+            border-radius: 13px;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .col8 {
+            background-color: rgb(244, 228, 228);
+            z-index: 12;
+            width: 200px;
+            border-radius: 14px;
+            height: 30px;
+        }
+
+        .p3 {
+            font-weight: bolder;
+            text-align: center;
+        }
+
+        .color {
+            background-color: rgb(255, 124, 159);
+            margin-top: 0;
+
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .col {
+            display: inline-block;
+        }
+
+        .link {
+            text-decoration: none;
+            color: black;
+            margin-left: 10px;
+        }
+
+        .p1 {
+            display: inline-block;
+            transition: transform 0.6s;
+        }
+
+        .p1:hover {
+            transform: translateY(-2px);
+            border-bottom: 2px solid black;
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 60px;
+            height: 45px;
+        }
+
+        .hamburger span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: black;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        @media screen and (max-width:768px) {
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .col2 {
+                display: none;
+                width: 100%;
+                order: 3;
+                text-align: center;
+                padding-top: 20px;
+            }
+
+            .col2.active {
+                display: block;
+            }
+
+            .col2 ul {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                margin: 0;
+            }
+
+            .col2 .link {
+                display: block;
+                padding: 10px;
+                margin: 5px 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .hamburger {
+                display: flex;
+                order: 2;
+            }
+
+            .col1 {
+                text-align: center;
+            }
+
+            .col {
+                width: 100%;
+                text-align: center;
+            }
+
+        }
+
+        @media screen and (min-width:768px) {
+            .col {
+                width: 49%;
+            }
+
+            .col2 {
+                display: flex;
+                justify-content: center;
+            }
+
+            .col1 {
+                text-align: center;
+            }
+
+            .hamburger {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width:576px) {
+            .col1 {
+                display: inline-block;
+
+            }
+
+            .col3 {
+                width: 65%;
+            }
+
+            .col13 {
+                width: 34%;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width:576px) {
+            .col13 {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body dir="rtl">
+    <div class="color">
+        <nav>
+            <div class="row">
+                <div class="col col1">
+                    <h2 class="h1">مشاوره دهنده</h2>
+                </div>
+
+                <!-- Hamburger Button for Mobile -->
+                <button class="hamburger" id="hamburgerBtn" aria-label="منو">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="col col2" dir="rtl" id="mobileMenu">
+                    <ul>
+                        <a href="phone.html" class="link">
+                            <p class="p1">خانه</p>
+                        </a>
+                        <a href="about us.html" class="link">
+                            <p class="p1" style="color: white; border-bottom: 2px solid rgb(255, 255, 255);">درباره ما</p>
+                        </a>
+                        <a href="shekayat.html" class="link">
+                            <p class="p1">شکایات</p>
+                        </a>
+                        <a href="shekayat.html" class="link">
+                            <p class="p1">مشاوره تخصصی</p>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="row1">
+        <div class="col4">
+            <h3>
+                با ما بیشتر آشنا شوید
+            </h3>
+            <div class="col15">
+                <h2 class="h2">
+                    اینجا مشاوره دهنده ست.
+                </h2>
+                <p class="p2">
+                    مشاوره دهنده آرتین پویا پرداز مشاوره دهنده، یک پلتفرم مشاوره اجتماعی، خدمات مشاوره روانشناسی را به
+                    صورت تلفنی
+                    ارائه می‌دهد. این پلتفرم به عنوان بزرگ ترین پلتفرم مشاوره کشور، به صورت شبانه روزی فعالیت می‌کند و
+                    آماده ارائه
+                    خدمات به تمامی هموطنان از اقصی نقاط ایران است.
+
+                    در مشاوره دهنده، تیمی از روانشناسان متخصص و متعهد با تجربه و دانش فنی قوی در زمینه‌های مختلف مشاوره
+                    فعالیت
+                    می‌کنند. آنها با استفاده از روش‌ها و تکنیک‌های مربوطه، به صورت شخصی و متناسب با نیازهای هر فرد،
+                    راهنمایی و
+                    پشتیبانی می‌کنند. تمرکز اصلی روانشناسان مشاوره دهنده بر روی بهبود روابط خانوادگی، رفع اختلالات روانی
+                    و اجتماعی،
+                    مدیریت استرس و اضطراب، بهبود خودشناسی و توانمندی‌های فردی، و همچنین راهنمایی در مسیر تصمیم‌گیری‌های
+                    مهم زندگی
+                    است.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+    <br>
+    <hr>
+    <div class="row2">
+        <div class="col1 col13">
+            <img src="image-hamkade-2-2.webp" class="img1">
+        </div>
+        <div class="col1 col3">
+            <h3>چشم‌انداز پلتفرم مشاوره تلفنی روانشناسی مشاوره دهنده:</h3>
+            <p>
+                ما در مشاوره دهنده متعهد به ارائه خدمات مشاوره با کیفیت و حرفه‌ای به مراجعین خود هستیم. هدف ما ایجاد
+                فضایی امن و محافظه‌کارانه برای ارائه راهکارها و پشتیبانی در مواجهه با چالش‌ها و مسائل مختلف زندگی است.
+                با تکیه بر تجربه و تخصص روانشناسان ما، به هموطنان عزیزمان امکان می‌دهیم تا با اطمینان و اعتماد به نفس در
+                مسیر بهبودی و رشد شخصی خود قدم بردارند. ما همچنین به دنبال ایجاد یک جامعه سالم و متعادل هستیم، جایی که
+                هر فرد به راحتی به خدمات مشاوره‌ای حرفه‌ای و حمایت‌های روانی دسترسی داشته باشد تا کیفیت زندگی‌اش را
+                بهبود بخشد و به رشد شخصی دست یابد. همچنین جزء اهداف و استراتژی‌های پلتفرم مشاوره دهنده این است که بتواند
+                به بزرگترین مجموعه مشاوره تلفنی روانشناسی در خاورمیانه تبدیل شود تا در راستای ارتقای سلامت ذهن و روان
+                بشریت گام بردارد.
+            </p>
+        </div>
+        <div class=" col5">
+            <a href="">
+                <button class="btn btn1">
+                    مشاهده روانشناسان
+                </button>
+            </a>
+            <a href="">
+                <button class="btn btn2 ">
+                    رزرو نوبت
+                </button>
+            </a>
+        </div>
+        <div class="row3">
+            <div class="col9">
+                <div class="col8">
+                    <p class="p3">شماره تلفن:09936383295</p>
+                </div>
+                <div class="col8">
+                    <p class="p3">تلگرام:amir138900</p>
+                </div>
+                <div class="col8">
+                    <p class="p3">واتساپ:amir138900</p>
+                </div>
+                <div class="col8">
+                    <p class="p3">اینستاگرام:amir89788</p>
+                </div>
+            </div>
+
+        </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburgerBtn.addEventListener('click', function () {
+            mobileMenu.classList.toggle('active');
+
+            // Animate hamburger to X
+            const spans = this.querySelectorAll('span');
+            if (mobileMenu.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+
+        // Close menu when clicking on a link (for mobile)
+        const menuLinks = document.querySelectorAll('.col2 .link');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                if (window.innerWidth <= 768) {
+                    mobileMenu.classList.remove('active');
+                    const spans = hamburgerBtn.querySelectorAll('span');
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+        });
+    });
+</script>
+
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "yekan";
+            src: url(B-Yekan-Plus-Font/B\ Yekan\ Plus\ Bold.ttf);
+            src: url(B-Yekan-Plus-Font/B\ Yekan\ Plus\ Regular.ttf);
+        }
+
+        body {
+            font-family: yekan;
+            text-align: center;
+            background: linear-gradient(to left, pink, rgb(226, 169, 179));
+        }
+
+        .row1 {
+            background-color: white;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            border: 2px solid black;
+            border-radius: 13px;
+        }
+
+        .submit {
+            margin-top: 15px;
+            width: 130px;
+            height: 30px;
+            border-radius: 13px;
+            border: none;
+            font-weight: bolder;
+            background-color: rgb(213, 141, 255);
+            transition: 0.6s;
+        }
+
+        .submit:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 3px gray;
+        }
+
+        .color {
+            background-color: rgb(255, 124, 159);
+            margin-top: 0;
+
+        }
+
+        .p9 {
+            display: inline-block;
+            transition: transform 0.6s;
+            border-bottom: 2px solid white;
+        }
+
+        .p9:hover {
+            transform: translateY(-2px);
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .col {
+            display: inline-block;
+        }
+
+        .link {
+            text-decoration: none;
+            color: black;
+            margin-left: 10px;
+        }
+
+        .p1 {
+            display: inline-block;
+            transition: transform 0.6s;
+        }
+
+        .p1:hover {
+            transform: translateY(-2px);
+            border-bottom: 2px solid black;
+        }
+
+        .row1 {
+            animation: h3 1.8s ease-in-out forwards;
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 60px;
+            height: 45px;
+        }
+
+        .hamburger span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: black;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        @keyframes h3 {
+            0% {
+                transform: translatey(100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translatey(0);
+                opacity: 1;
+            }
+
+        }
+
+        @media screen and (max-width:768px) {
+            .row {
+                display: block;
+            }
+
+            .col {
+                width: 100%;
+                text-align: center;
+            }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .col2 {
+                display: none;
+                width: 100%;
+                order: 3;
+                text-align: center;
+                padding-top: 20px;
+            }
+
+            .col2.active {
+                display: block;
+            }
+
+            .col2 ul {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                margin: 0;
+            }
+
+            .col2 .link {
+                display: block;
+                padding: 10px;
+                margin: 5px 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .hamburger {
+                display: flex;
+                order: 2;
+            }
+
+            .col1 {
+                order: 1;
+                text-align: center;
+                padding-right: 20px;
+            }
+
+        }
+
+        @media screen and (min-width:768px) {
+            .col {
+                width: 49%;
+            }
+
+            .col2 {
+                display: flex;
+                justify-content: center;
+            }
+
+            .col1 {
+                text-align: center;
+            }
+
+            .hamburger {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body dir="rtl">
+    <div class="color">
+        <nav>
+            <div class="row">
+                <div class="col col1">
+                    <h2 class="h1">مشاوره دهنده</h2>
+                </div>
+
+                <!-- Hamburger Button for Mobile -->
+                <button class="hamburger" id="hamburgerBtn" aria-label="منو">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="col col2" dir="rtl" id="mobileMenu">
+                    <ul>
+                        <a href="phone.html" class="link">
+                            <p class="p1">خانه</p>
+                        </a>
+                        <a href="about us.html" class="link">
+                            <p class="p1" style="color: white; border-bottom: 2px solid rgb(255, 255, 255);">درباره ما
+                            </p>
+                        </a>
+                        <a href="shekayat.html" class="link">
+                            <p class="p1">شکایات</p>
+                        </a>
+                        <a href="shekayat.html" class="link">
+                            <p class="p1">مشاوره تخصصی</p>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="row1">
+        <div class="col1">
+            <h1>مشکل چیست؟</h1>
+            <form action="">
+                <label for="">کند بودن سایت</label>
+                <input type="radio" name="moshkel">
+                <br>
+                <label for="">بد بودن مشاوره</label>
+                <input type="radio" name="moshkel">
+                <br>
+                <label for="">پاسخ گو نبودن پشتیبانی</label>
+                <input type="radio" name="moshkel">
+                <br>
+                <label for="">نبود مشاوره کافی</label>
+                <input type="radio" name="moshkel">
+                <br>
+                <label for="">نوبت دهی بد</label>
+                <input type="radio" name="moshkel">
+                <br>
+                <label for="">دلایل دیگر</label>
+                <input type="radio" name="moshkel" onclick="run()">
+                <br>
+                <input class="submit" onclick="avrage()" type="submit" value="گزارش مشکل">
+            </form>
+        </div>
+    </div>
+    <script>
+        function avrage() {
+            alert("مشکل شما برسی خواهد شد")
+        }
+        function run() {
+            let a = prompt("مشکل را وارد کنید")
+            if (a == "") {
+                alert("مشکل را وارد نکرده اید")
+            }
+            else {
+                alert("مشکل شما درحال برسی است")
+            }
+
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            hamburgerBtn.addEventListener('click', function () {
+                mobileMenu.classList.toggle('active');
+
+                // Animate hamburger to X
+                const spans = this.querySelectorAll('span');
+                if (mobileMenu.classList.contains('active')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+                } else {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+
+            // Close menu when clicking on a link (for mobile)
+            const menuLinks = document.querySelectorAll('.col2 .link');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    if (window.innerWidth <= 768) {
+                        mobileMenu.classList.remove('active');
+                        const spans = hamburgerBtn.querySelectorAll('span');
+                        spans[0].style.transform = 'none';
+                        spans[1].style.opacity = '1';
+                        spans[2].style.transform = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

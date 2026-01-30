@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'yekan';
+            src: url(B-Yekan-Plus-Font/B\ Yekan\ Plus\ Bold.ttf);
+            src: url(B-Yekan-Plus-Font/B\ Yekan\ Plus\ Regular.ttf);
+        }
+
+        body {
+            font-family: yekan;
+            margin-top: 0;
+        }
+
+        .color {
+            background-color: rgb(255, 124, 159);
+            margin-top: 0;
+
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .col {
+            display: inline-block;
+        }
+
+        .link {
+            text-decoration: none;
+            color: black;
+            margin-left: 10px;
+        }
+
+        .p1 {
+            display: inline-block;
+            transition: transform 0.6s;
+        }
+
+        .p1:hover {
+            transform: translateY(-2px);
+            border-bottom: 2px solid black;
+        }
+
+        .p9 {
+            display: inline-block;
+            transition: transform 0.6s;
+        }
+
+        .p9:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn {
+            background-color: rgb(20, 6, 213);
+            color: white;
+            width: 110px;
+            height: 35px;
+            border: none;
+            border-radius: 13px;
+            cursor: pointer;
+            font-weight: bolder;
+            transition: 0.7s;
+        }
+
+        .btn:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 102, 255);
+        }
+
+        .p2 {
+            margin-top: -10px;
+            color: rgb(89, 89, 89);
+            text-align: justify;
+        }
+
+        .img1 {
+            width: 350px;
+        }
+
+        .img2 {
+            width: 210px;
+            padding-right: 15px;
+        }
+
+        .img3 {
+            width: 210px;
+            height: 200px;
+            padding-right: 15px;
+        }
+
+        .img4 {
+            padding-right: 60px;
+            padding-top: 20px;
+        }
+
+        .card {
+            background-color: rgb(255, 255, 255);
+            width: 170px;
+            height: 230px;
+            box-shadow: 1px 1px 4px gray;
+            border-radius: 13px;
+            display: inline-block;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-right: 50px;
+            transition: 0.7s;
+        }
+
+        .col7 {
+            background-color: rgb(255, 255, 255);
+            width: 240px;
+            height: 300px;
+            box-shadow: 1px 1px 4px gray;
+            border-radius: 13px;
+            display: inline-block;
+            margin-top: 15px;
+            margin-right: 20px;
+            transition: 0.7s;
+
+        }
+
+        .col7:hover {
+            transform: translateY(-10px);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .row3 {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        h3,
+        h5 {
+            text-align: center;
+        }
+
+        .p4 {
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .a2 {
+            color: white;
+            background-color: rgb(201, 0, 223);
+            width: 200px;
+            height: 30px;
+            margin-right: 15px;
+            border: none;
+            font-size: 16px;
+            font-weight: bolder;
+            border-radius: 13px;
+            transition: 0.6s;
+        }
+
+        .a2:hover {
+            transform: translatey(-5px);
+            box-shadow: 2px 2px 3px gray;
+        }
+
+        .a2:active {
+            transform: scale(0.95);
+        }
+
+        .row4 {
+            margin-left: 40px;
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 60px;
+            height: 45px;
+        }
+
+        .hamburger span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: black;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        @media screen and (max-width:768px) {
+            .row {
+                display: block;
+            }
+
+            .col {
+                width: 100%;
+                text-align: center;
+            }
+
+            .row4 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .col1 {
+                order: 1;
+                text-align: center;
+                padding-right: 20px;
+            }
+
+        }
+
+        @media screen and (min-width:768px) {
+            .col {
+                width: 49%;
+            }
+
+            .col2 {
+                display: flex;
+                justify-content: center;
+            }
+
+            .col1 {
+                text-align: center;
+            }
+
+            .card1,
+            .card3,
+            .card5 {
+                position: relative;
+                top: -25px;
+            }
+
+            .card2,
+            .card4 {
+                position: relative;
+                bottom: -25px;
+            }
+
+            .row4 {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+        }
+
+        @media screen and (min-width:768px) {
+            .col5 {
+                width: 45%;
+                text-align: center;
+            }
+
+            .col6 {
+                width: 54%;
+                position: relative;
+                top: -70px;
+
+            }
+
+            .col4 {
+                display: inline-block;
+            }
+
+            .hamburger {
+                display: none;
+            }
+
+        }
+
+        @media screen and (max-width:768px) {
+
+            .col5 {
+                text-align: center;
+            }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .col2 {
+                display: none;
+                width: 100%;
+                order: 3;
+                text-align: center;
+                padding-top: 20px;
+            }
+
+            .col2.active {
+                display: block;
+            }
+
+            .col2 ul {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                margin: 0;
+            }
+
+            .col2 .link {
+                display: block;
+                padding: 10px;
+                margin: 5px 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .hamburger {
+                display: flex;
+                order: 2;
+            }
+
+        }
+    </style>
+</head>
+
+<body dir="rtl">
+    <div class="color">
+        <nav>
+            <div class="row">
+                <div class="col col1">
+                    <h2 class="h1">مشاوره دهنده</h2>
+                </div>
+
+                <!-- Hamburger Button for Mobile -->
+                <button class="hamburger" id="hamburgerBtn" aria-label="منو">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="col col2" dir="rtl" id="mobileMenu">
+                    <ul>
+                        <a href="#" class="link">
+                            <p class="p1"  style="color: white;border-bottom: 2px solid white;">خانه</p>
+                        </a>
+                        <a href="#moshaverh" class="link">
+                            <p class="p1">مشاورها</p>
+                        </a>
+                        <a href="about us.html" class="link">
+                            <p class="p1">درباره ما</p>
+                        </a>
+                        <a href="shekayat.html" class="link">
+                            <p class="p1">شکایات</p>
+                        </a>
+                        <a href="shekayat.html" class="link">
+                            <p class="p1">دوره اموزشی</p>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="row2">
+        <div class="col4 col5">
+            <img src="image-hamkade-3 (1).webp" class="img1" alt="کارکنان مشاوره دهنده">
+        </div>
+        <div class="col4 col6">
+            <h2>
+                مشاوره دهنده کجاست:
+            </h2>
+            <p class="p2">
+                <strong>جایی ست که آرامش را بازمیابید!</strong>
+                <br>
+                در مشاوره دهنده، تیمی از مشاوران متخصص و متعهد با تجربه و دانش فنی قوی در زمینه‌های مختلف مشاوره فعالیت
+                می‌کنند. آنها با استفاده از روش‌ها و تکنیک‌های مربوطه، به صورت شخصی و متناسب با نیازهای هر فرد، راهنمایی
+                و پشتیبانی می‌کنند.
+            </p>
+        </div>
+    </div>
+    <div class="h2" style="display: block;text-align: center;">
+        <h1 style="font-size: 45px;opacity: 0.2;color: rgb(255, 0, 0);">مشاوره دهنده</h1>
+        <h2 style="margin-top: -40px;">
+            راهنمای دریافت نوبت مشاوره
+        </h2>
+    </div>
+    <div class="row4">
+
+        <div class="card card1">
+            <img src="5.webp" class="img4">
+            <h5>1 ) انتخاب حیطه مشاوره</h3>
+                <p class="p4">مسئله ای که در آن نیاز به کسب مشاوره دارید را مشخص نمایید.</p>
+        </div>
+        <div class="card card2">
+            <img src="4.webp" class="img4">
+            <h5>2 ) خرید اعتبار مشاوره</h5>
+            <p class="p4">بسته ی اعتباری موردنظر تان را تهیه کنید.</p>
+        </div>
+        <div class="card card3">
+            <img src="1.webp" class="img4">
+            <h5>3 ) انتخاب مشاور
+            </h5>
+            <p class="p4">مشاور دلخواهتان را از لیست مشاوران انتخاب کنید.</p>
+        </div>
+        <div class="card card4">
+            <img src="2.webp" class="img4">
+            <h5>4) تعیین زمان جلسه
+            </h5>
+            <p class="p4">زمان مناسب برقراری ارتباط با مشاور را تعیین می کنید.</p>
+        </div>
+        <div class="card card5">
+            <img src="3.webp" class="img4">
+            <h5>5 ) برقراری جلسه مشاوره</h5>
+            <p class="p4">مشاور در زمان تعیین شده با شما ارتباط خواهد گرفت.</p>
+        </div>
+    </div>
+    <h3 style="font-size: 25px; margin-top: -15px;">مشاوره های رایگان</h3>
+    <div class="row3" id="moshaverh">
+        <div class="col7 c">
+            <img src="image-hamkade-1-1.webp" class="img2" alt="">
+            <h3>کلید بهبود روابط داخل خانواده</h3>
+
+            <a href="" style="text-decoration: none;color: white;">
+                <button class="a2">
+                    ادامه مطلب
+                </button>
+            </a>
+        </div>
+        <div class="col7 col9">
+            <img src="image-hamkade-3.webp" class="img2" alt="">
+            <h3>مشاوره روانشناسی خانواده</h3>
+
+            <a href="" style="text-decoration: none;color: white;">
+                <button class="a2">
+                    ادامه مطلب
+                </button>
+            </a>
+        </div>
+        <div class="col7 ">
+            <img src="image-hamkade-مشاوره-فردی.webp" class="img2" alt="">
+            <h3>مشاوره فردی </h3>
+
+            <a href="" style="text-decoration: none;color: white;">
+                <button class="a2">
+                    ادامه مطلب
+                </button>
+            </a>
+        </div>
+        <div class="col7 ">
+            <img src="image-hamkade-2.webp" class="img2" alt="">
+            <h3>بهترین مشاوره کودک و نوجوان</h3>
+
+            <a href="" style="text-decoration: none;color: white;">
+                <button class="a2">
+                    ادامه مطلب
+                </button>
+            </a>
+        </div>
+    </div>
+
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburgerBtn.addEventListener('click', function () {
+            mobileMenu.classList.toggle('active');
+
+            // Animate hamburger to X
+            const spans = this.querySelectorAll('span');
+            if (mobileMenu.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+
+        // Close menu when clicking on a link (for mobile)
+        const menuLinks = document.querySelectorAll('.col2 .link');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                if (window.innerWidth <= 768) {
+                    mobileMenu.classList.remove('active');
+                    const spans = hamburgerBtn.querySelectorAll('span');
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+        });
+    });
+</script>
+
+</html>

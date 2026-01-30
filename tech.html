@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'yekan';
+            src: url(B-Yekan-Plus-Font/B\ Yekan\ Plus\ Bold.ttf);
+            src: url(B-Yekan-Plus-Font/B\ Yekan\ Plus\ Regular.ttf);
+        }
+
+        body {
+            font-family: yekan;
+            margin-top: 0;
+            background-color: rgb(255, 233, 236);
+        }
+
+        .color {
+            background-color: rgb(255, 124, 159);
+            margin-top: 0;
+
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .col {
+            display: inline-block;
+        }
+
+        .p9 {
+            display: inline-block;
+            transition: transform 0.6s;
+            border-bottom: 2px solid white;
+        }
+
+        .p9:hover {
+            transform: translateY(-2px);
+        }
+
+        .link {
+            text-decoration: none;
+            color: black;
+            margin-left: 10px;
+        }
+
+        .p1 {
+            display: inline-block;
+            transition: transform 0.6s;
+        }
+
+        .p1:hover {
+            transform: translateY(-2px);
+            border-bottom: 2px solid black;
+        }
+
+        #imagp {
+            max-width: 400px;
+            max-height: 400px;
+            margin-top: 20px;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            display: none;
+        }
+
+        #image[type='file']::file-selector-button {
+            background-color: pink;
+            width: 110px;
+            height: 30px;
+            border-radius: 12px;
+            margin: auto;
+            border: none;
+            margin-top: 50px;
+            position: relative;
+            left: -80px;
+
+        }
+
+        #image[type='file'] {
+            color: white;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .input {
+            background-color: rgb(243, 243, 243);
+            border: 0.5px solid black;
+            width: 200px;
+            height: 25px;
+            border-radius: 12px;
+        }
+
+        input[type='submit'] {
+            color: blueviolet;
+            background-color: pink;
+            width: 100px;
+            height: 40px;
+            border: none;
+            border-radius: 12px;
+        }
+
+        input[type='submit']:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 3px gray;
+        }
+
+        @media screen and (max-width:768px) {
+            .row {
+                display: block;
+            }
+
+            .col {
+                width: 100%;
+                text-align: center;
+            }
+
+        }
+
+        @media screen and (min-width:768px) {
+            .col {
+                width: 49%;
+            }
+
+            .col2 {
+                display: flex;
+                justify-content: center;
+            }
+
+            .col1 {
+                text-align: center;
+            }
+            form{
+                position: relative;
+                left: -330px;
+            }
+        }
+    </style>
+</head>
+
+<body dir="rtl">
+    <div class="color">
+        <nav>
+            <div class="row">
+                <div class="col col1">
+                    <h2 class="h1">مشاوره دهنده</h2>
+                </div>
+
+                <div class="col col2" dir="rtl">
+                    <ul>
+                        <a href="index.html" class="link">
+                            <p class="p1">خانه</p>
+                        </a>
+                        <a href="about us.html" class="link">
+                            <p class="p1">درباره ما</p>
+                        </a>
+                        <a href="shekayat.html" class="link">
+                            <p class="p1">شکایات</p>
+                        </a>
+                        <a href="#" class="link">
+                            <p class="p9" style="color: white;font-size: 18px;">مشاوره اختصاصی</p>
+                        </a>
+                    </ul>
+
+
+                </div>
+        </nav>
+    </div>
+    <div class="row2">
+        <div class="col">
+            <form>
+                
+                <label>عکس کارت ملی خود را وارد کنید:</label>
+                <img id="imagp" src="#" alt="">
+                <input type="file" id="image" accept="image/*">
+                <br><br>
+                <label>نام:</label>
+                <input placeholder="مثال علی" class="input" type="text">
+                <br><br>
+                <label>نام خانوادگی:</label>
+                <input placeholder="مثال مرادی" class="input" type="text">
+                <br><br> <label>کد ملی:</label>
+                <input placeholder="1234567890" class="input" type="number">
+                <br><br> <label>تاریخ تولد:</label>
+                <input class="input" type="date">
+                <br><br>
+                <label>محل تولد:</label>
+                <input placeholder="مثال همدان" class="input" type="text">
+                <br><br>
+                <label>استان:</label>
+                <input class="input" type="text" placeholder="استان حال حاضر">
+                <br><br>
+                <label>شهر:</label>
+                <input placeholder="مثال فردیس" class="input" type="text">
+                <br><br>
+                <label>شماره تلفن:</label>
+                <input placeholder="09" class="input" type="tel">
+                <br><br>
+                <label>ایمیل:</label>
+                <input class="input" type="email">
+                <br><br>
+                <label class="label">نشانی خانه</label>
+                <textarea cols="30" rows="4"></textarea>
+                <br><br>
+                <label class="label">مشکل:</label>
+                <textarea cols="30" rows="4"></textarea>
+                <br><br>
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+    <script>
+        const imagei = document.getElementById("image");
+        const imagepr = document.getElementById("imagp");
+
+        imagei.addEventListener('change', function () {
+            if (event.target.files && event.target.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    imagepr.src = e.target.result;
+                    imagepr.style.display = 'block';
+                };
+                reader.readAsDataURL(event.target.files[0])
+            }
+        })
+
+    </script>
+</body>
+
+
+</html>
